@@ -1,4 +1,4 @@
-#include <example/plugin.h>
+#include <unstable_tp/plugin.h>
 
 bool load_plugin(void);
 
