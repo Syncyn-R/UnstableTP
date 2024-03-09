@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
 
-project(littlehooker-example)
+project(unstable_tp)
 
 set(CMAKE_C_STANDARD 17)
 set(CMAKE_BUILD_TYPE Debug)
@@ -55,10 +55,10 @@ set(CMAKE_SHARED_LINKER_FLAGS_RELEASE "${CMAKE_SHARED_LINKER_FLAGS_RELEASE} /DEB
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} /utf-8")
 set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} /NODEFAULTLIB:MSVCRTD")
 
-add_library(littlehooker-example SHARED ${SRC_FILES_DIR})
+add_library(unstable_tp SHARED ${SRC_FILES_DIR})
 
-set_target_properties(littlehooker-example PROPERTIES OUTPUT_NAME "littlehooker-example")
+set_target_properties(unstable_tp PROPERTIES OUTPUT_NAME "unstable_tp")
 
-target_link_libraries(littlehooker-example 
+target_link_libraries(unstable_tp 
 	"${CMAKE_SOURCE_DIR}/lib/littlehooker.lib"
 )

@@ -1,4 +1,5 @@
 #pragma once
+#include <unstable_tp/symbol.h>
 #include <littlehooker/littlehooker.h>
 
 enum log_level {

@@ -15,11 +15,8 @@ bool server_started = false;
  */
 
 
-
 bool init_hooks(void)
 {
-    
-
     lh_enable_all_hook();
     return true;
 }
