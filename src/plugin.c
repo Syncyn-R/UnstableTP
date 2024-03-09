@@ -1,6 +1,5 @@
 #include <example/plugin.h>
 #include <example/nbs/nbs.h>
-#include <example/nbs/遠い空へ.h>
 
 extern struct string string;
 extern struct level *g_level;
