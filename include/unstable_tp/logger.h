@@ -9,4 +9,4 @@ enum log_level {
     ERR = 8u
 };
 
-void server_logger(const char *msg, enum log_level level);
+void server_logger(enum log_level level, const char *msg, ...);

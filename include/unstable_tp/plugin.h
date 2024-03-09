@@ -8,5 +8,6 @@
 #include "mc/actor.h"
 #include "mc/level.h"
 #include "mc/db_storage.h"
+#include "unstable_tp/symbol.h"
 
 bool init_hooks(void);

@@ -1,8 +1,11 @@
 #include <unstable_tp/logger.h>
 
-void server_logger(const char *msg, enum log_level level)
+void server_logger(enum log_level level, const char *msg, ...)
 {
-    TLCALL(S_BedrockLog__log_va,
-        char (*)(unsigned int a1, char a2, int a3, int a4, unsigned int a5, const char *a6, int a7, const char *a8),
-        0, 1, 0, 12, level, "HOOKER->LOG", 114514, msg);
+	va_list va;
+	va_start(va, msg);
+	TLCALL(S_BedrockLog__log_va,
+		char (*)(unsigned int category, char set, int rule, int area, unsigned int level, const char *tag, int tid, const char *format, va_list args),
+		0, 1, 0x0d00, 0, level, "私のオナニーを見てください！", 0x0721, msg, va);
+	va_end(va);
 }

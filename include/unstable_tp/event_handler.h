@@ -1,0 +1,1 @@
+void event_on_server_init_logger();

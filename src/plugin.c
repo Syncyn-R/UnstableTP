@@ -1,4 +1,5 @@
-#include "unstable_tp/plugin.h"
+#include <unstable_tp/plugin.h>
+#include <unstable_tp/event_handler.h>
 
 extern struct string string;
 extern struct level *g_level;
@@ -14,9 +15,15 @@ bool server_started = false;
  * 2: Start time
  */
 
+TLHOOK(on_initialize_logging, void, S_ServerInit_Log, uintptr_t this)
+{
+	on_initialize_logging.original(this);
+	event_on_server_init_logger();
+}
 
 bool init_hooks(void)
 {
+    on_initialize_logging.init(&on_initialize_logging);
     lh_enable_all_hook();
     return true;
 }
