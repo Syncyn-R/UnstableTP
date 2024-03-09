@@ -1,5 +1,4 @@
-#include <example/plugin.h>
-#include <example/nbs/nbs.h>
+#include <unstable_tp/plugin.h>
 
 extern struct string string;
 extern struct level *g_level;
