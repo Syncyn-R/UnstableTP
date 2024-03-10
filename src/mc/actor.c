@@ -1,7 +1,15 @@
 #include <unstable_tp/mc/actor.h>
 
 extern struct string string;
-
+//const struct Vec3 *__fastcall Actor::getPosition(Actor *this)
+//{
+//    const struct Vec3 *result; // rax
+//
+//    result = (const struct Vec3 *)*((_QWORD *)this + 90);
+//    if ( !result )
+//        gsl::details::terminate(this);
+//    return result;
+//}
 struct vec3 *actor_get_pos(struct actor *actor)
 {
 	return TLCALL("?getPosition@Actor@@UEBAAEBVVec3@@XZ",
